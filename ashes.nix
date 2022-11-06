@@ -3,7 +3,7 @@
 {
 	imports =
 		[
-			./hardware-configuration.nix
+			./hardware-ashes.nix
 		];
 
 	system.stateVersion = "22.05";
