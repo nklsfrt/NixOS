@@ -48,6 +48,7 @@
 	# Package configuration - specify packages to be made available systemwide
 	
 	environment.systemPackages = with pkgs; [
+		git
 		tmux
 		micro
 		exa
