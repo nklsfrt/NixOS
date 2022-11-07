@@ -12,7 +12,10 @@
 	# Boot configuration - Selecting kernel packages, providing kernel parameters etc.
 	
 	boot.kernelParams = [ "nohibernate" ];
-	boot.loader.grub.devices = [ "/dev/sda" ];
+	boot.loader.grub = {
+		devices = [ "/dev/sda" ];
+		configurationLimit = 16;
+	};
 
 	# Network configuration - Specify necessary routes for Hetzners IPv6 implementation
 
