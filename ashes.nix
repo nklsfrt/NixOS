@@ -7,7 +7,11 @@
 		];
 
 	system.stateVersion = "22.05";
-	nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+	nix.settings = {
+		experimental-features = [ "nix-command" "flakes" ];
+		auto-optimize-store = true;
+	};
 
 	# Boot configuration - Selecting kernel packages, providing kernel parameters etc.
 	
