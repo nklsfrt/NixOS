@@ -9,7 +9,7 @@
 	system.stateVersion = "22.05";
 
 	nix.settings = {
-		experimental-features = [ "nix-command" "flakes" ];
+		experimental-features = [ "nix-command flakes" ];
 		auto-optimize-store = true;
 	};
 
