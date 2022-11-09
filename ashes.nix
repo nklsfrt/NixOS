@@ -17,7 +17,7 @@
 		automatic = true;
 		dates = "weekly";
 		options = "--delete-older-than 30d";
-	}
+	};
 
 	# Boot configuration - Selecting kernel packages, providing kernel parameters etc.
 	
