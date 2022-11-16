@@ -8,7 +8,7 @@
 
     nixosConfigurations."ashes" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      modules = [ ./hosts/ashes.nix ];
+      modules = [ ./hosts/ashes/ashes.nix ];
     };
   };
 }

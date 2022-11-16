@@ -4,7 +4,7 @@
 	imports =
 		[
 			./hardware-ashes.nix
-			/abilities/common.nix
+			../../abilities/common.nix
 			# /role/web-presence.nix
 		];
 
