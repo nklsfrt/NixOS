@@ -10,5 +10,10 @@
       system = "x86_64-linux";
       modules = [ ./ashes.nix ];
     };
+    
+    nixosConfigurations."timber" = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [ ./timber.nix ];
+    };
   };
 }

@@ -3,21 +3,11 @@
 {
 	imports =
 		[
+			./common.nix
 			./hardware-ashes.nix
 		];
 
 	system.stateVersion = "22.05";
-
-	nix.settings = {
-		experimental-features = [ "nix-command flakes" ];
-		auto-optimise-store = true;
-	};
-
-	nix.gc = {
-		automatic = true;
-		dates = "weekly";
-		options = "--delete-older-than 30d";
-	};
 
 	# Boot configuration - Selecting kernel packages, providing kernel parameters etc.
 	
