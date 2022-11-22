@@ -34,43 +34,4 @@
 			};
 		};
 	};
-	
-
-	# Service configuration - Specify needed services 
-	services.openssh.enable = true;
-	
-	# User configuration
-
-	users.users.nase = {
-		name = "nase";
-		extraGroups = [ "wheel" ];
-		isNormalUser = true;
-		shell = pkgs.fish;
-		openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGvAJm/S7F8FJj5veaT1lqN+3+/etph6BriSxYPzzQAe nase@timber" ];
-	};
-	
-	users.users.root.openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGvAJm/S7F8FJj5veaT1lqN+3+/etph6BriSxYPzzQAe nase@timber" ];
-	# users.users.root.password = "myconfigsfucked";
-
-
-	# Package configuration - specify packages to be made available systemwide
-	
-	environment.systemPackages = with pkgs; [
-		git
-		tmux
-		micro
-		exa
-		bat
-		fish
-	];
-
-	programs.fish.enable = true;
-
-
-	# Virtualization
-
-	virtualisation.podman = {
-		enable = true;
-		dockerCompat = false;
-	};
 }
