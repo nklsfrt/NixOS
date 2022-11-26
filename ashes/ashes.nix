@@ -48,7 +48,7 @@
         extraConfig = ''
           encode zstd gzip
           respond {
-            body <a rel="me" href="https://social.tchncs.de/@nkls">Mastodon</a>
+            body "<a rel="me" href="https://social.tchncs.de/@nkls">Mastodon</a>"
           }
         '';
       };
