@@ -3,8 +3,8 @@
 {
 	imports =
 		[
-			./common.nix
-			./hardware-ashes.nix
+			../common.nix
+			./hardware.nix
 		];
 
 	# Boot configuration - Selecting kernel packages, providing kernel parameters etc.

@@ -3,8 +3,8 @@
 {
   imports =
     [
-      ./common.nix
-      ./hardware-timber.nix
+      ../common.nix
+      ./hardware.nix
     ];
 
   boot = {
