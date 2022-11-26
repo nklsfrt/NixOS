@@ -7,8 +7,6 @@
 			./hardware-ashes.nix
 		];
 
-	system.stateVersion = "22.05";
-
 	# Boot configuration - Selecting kernel packages, providing kernel parameters etc.
 	
 	boot.loader.grub = {
