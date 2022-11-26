@@ -3,6 +3,7 @@
 {
   imports =
     [
+      ./common.nix
       ./hardware-timber.nix
     ];
 
@@ -29,12 +30,6 @@
 
   # Set your time zone.
   time.timeZone = "Europe/Vienna";
-
-  nix = {
-   package = pkgs.nixFlakes;
-   extraOptions = lib.optionalString (config.nix.package == pkgs.nixFlakes)
-     "experimental-features = nix-command flakes";
-  };
 
   # Select internationalisation properties.
   i18n = {
@@ -76,13 +71,8 @@
   };
 
   users.users.nase = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ];
-    shell = pkgs.fish;
-    hashedPassword = "$6$p6HY8TeVeozfWc4g$L0YDMa4zaU83L5rNxfesj.sGCn8bo3yB93VJxQ8/gslgScGq7BTeHsOngb3gRBCsbs4F5oRP/ywIyQZeoPUGF/";
+    home = "/home/niklas";
   };
-
-  programs.fish.enable = true;
   
   users.users.root.hashedPassword = "$6$GKt/5QJ1wA0.E/Zw$g5oPpo42B1KOm547s2wvEwpw8Us7bP4FvfPkZPKx3jKaAP57Sis/MzxgBXmvZ2WyTCInIEsF2cQG1SE3jiYMg0";
   
@@ -93,15 +83,9 @@
     (pkgs.systemd.overrideAttrs (oldAttrs: {
       withHomed = true;
     }))
-     git
-     wget
-     fish
      foot
-     micro
      htop
      vscode
-     exa
-     bat
      librewolf-wayland
      pavucontrol
      helvum
