@@ -23,7 +23,7 @@
     kernelParams = [ "nohibernate" "nvidia-drm.modeset=1" ];
     supportedFilesystems = [ "zfs" ];
     zfs.extraPools = [ "vault" ];
-  }
+  };
 
   fileSystems."/home".neededForBoot = true;
 
@@ -48,9 +48,9 @@
       LC_NUMERIC = "de_DE.UTF-8";
       LC_MONETARY = "de_DE.UTF-8";
       LC_PAPER = "de_DE.UTF-8";
-      LC_MEASUREMENT = "de_DE.UTF-8"
+      LC_MEASUREMENT = "de_DE.UTF-8";
     };
-  }
+  };
   # console = {
   #   font = "Lat2-Terminus16";
   #   keyMap = "us";
