@@ -20,6 +20,7 @@
         canTouchEfiVariables = false;
       };
     };
+    initrd.kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
     kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
     kernelParams = [ "nohibernate" "nvidia-drm.modeset=1" ];
     supportedFilesystems = [ "zfs" ];
