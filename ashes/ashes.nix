@@ -32,4 +32,24 @@
 			};
 		};
 	};
+
+	# test configuration for Caddy
+
+	services.caddy = {
+		enable = true;
+		virtualHosts = {
+			"nklsfrt.de" = {
+				extraConfig = ''
+          encode zstd gzip
+          redir https://www.nklsfrt.de/
+        '';
+      };
+      "www.nklsfrt.de" = {
+        extraConfig = ''
+          encode zstd gzip
+          respond "This is a test!"
+        '';
+      };
+		};
+	};
 }
