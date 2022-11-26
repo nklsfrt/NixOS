@@ -3,7 +3,7 @@
   description = "My very first centralized infrastructure configuration!";
 
   inputs = {
-    nixpkgs.url = github:NixOS/nixpkgs;
+    nixpkgs.url = github:NixOS/nixpkgs/nixos-22.11;
   };
 
   outputs = { self, nixpkgs }: {
