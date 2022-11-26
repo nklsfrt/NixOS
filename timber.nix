@@ -81,9 +81,6 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    (pkgs.systemd.overrideAttrs (oldAttrs: {
-      withHomed = true;
-    }))
      foot
      htop
      vscode
