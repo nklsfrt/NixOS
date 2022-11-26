@@ -47,7 +47,9 @@
       "www.nklsfrt.de" = {
         extraConfig = ''
           encode zstd gzip
-          respond "This is a test!"
+          respond {
+            body <a rel="me" href="https://social.tchncs.de/@nkls">Mastodon</a>
+          }
         '';
       };
 		};
